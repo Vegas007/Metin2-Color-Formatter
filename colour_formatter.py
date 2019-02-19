@@ -20,38 +20,38 @@ __version__ = '1.0'
 		text = CFF.format('Item name:', 'springgreen', CFF.FLAG_NEW_TAB) + CFF.format(item.GetItemName(), 'chocolate')
 '''
 class CFF:
-	FLAG_NEW_LINE		= 0
-	FLAG_NEW_TAB		= 1
-	FLAG_NEW_SPACE		= 2
+	FLAG_NEW_LINE       = 0
+	FLAG_NEW_TAB        = 1
+	FLAG_NEW_SPACE      = 2
 	
-	PATTERN_BEGIN		= '|cff'
-	PATTERN_END			= '|h|r'
+	PATTERN_BEGIN       = '|cff'
+	PATTERN_END         = '|h|r'
 	
 	# Flags
-	FLAG_DICT 			=\
+	FLAG_DICT =\
 	{
-		FLAG_NEW_LINE: 		'\n',
-		FLAG_NEW_TAB:		'\t',
-		FLAG_NEW_SPACE: 	' ' 
+		FLAG_NEW_LINE:      '\n',
+		FLAG_NEW_TAB:       '\t',
+		FLAG_NEW_SPACE:     ' ' 
 	}
 
 	# Colors
-	COLOR_HEX_DICT		=\
+	COLOR_HEX_DICT =\
 	{
-		'green':			'#15FF00',
-		'blue':				'#00C5FF',
-		'banana':			'#E3CF57',
-		'chocolate':		'#D2691E',
-		'darkred':			'#8B0000',
-		'gray':				'#808080',
-		'red':				'#FF0000',
-		'skyblue':			'#87CEEB',
-		'slateblue':		'#6A5ACD',
-		'snow':				'#FFFAFA',
-		'springgreen':		'#00FF7F',
-		'steelblue':		'#4682B4',
-		'white':			'#FFFFFF',
-		'yellow':			'#FFFF00',
+		'green':            '#15FF00',
+		'blue':             '#00C5FF',
+		'banana':           '#E3CF57',
+		'chocolate':        '#D2691E',
+		'darkred':          '#8B0000',
+		'gray':             '#808080',
+		'red':              '#FF0000',
+		'skyblue':          '#87CEEB',
+		'slateblue':        '#6A5ACD',
+		'snow':             '#FFFAFA',
+		'springgreen':      '#00FF7F',
+		'steelblue':        '#4682B4',
+		'white':            '#FFFFFF',
+		'yellow':           '#FFFF00',
 	}
 	
 	@staticmethod
