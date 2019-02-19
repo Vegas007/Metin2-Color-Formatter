@@ -5,11 +5,11 @@ __version__ = '1.0'
 '''
 	A simple class which convert the values into a string by a specific color name.
 	
-	= Python Color Constants Module:
+	Python Color Constants Module:
 		https://www.webucator.com/blog/2015/03/python-color-constants-module/
 		https://www.color-hex.com/color/ccffff
 
-	= Ex-How-To-Use:
+	Ex-How-To-Use:
 		text = CFF.format('Metin2', 'green')
 		text = CFF.format(8000, 'banana')
 		text = CFF.format(412.55, 'red')
