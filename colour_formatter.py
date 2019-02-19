@@ -28,16 +28,14 @@ class CFF:
 	PATTERN_END         = '|h|r'
 	
 	# Flags
-	FLAG_DICT =\
-	{
+	FLAG_DICT = {
 		FLAG_NEW_LINE:      '\n',
 		FLAG_NEW_TAB:       '\t',
 		FLAG_NEW_SPACE:     ' ' 
 	}
 
 	# Colors
-	COLOR_HEX_DICT =\
-	{
+	COLOR_HEX_DICT = {
 		'green':            '#15FF00',
 		'blue':             '#00C5FF',
 		'banana':           '#E3CF57',
@@ -60,26 +58,17 @@ class CFF:
 			return '{0}{1}{2}{3}{4}'.format(CFF.PATTERN_BEGIN, color, src, CFF.PATTERN_END, CFF.FLAG_DICT.get(add_flag, str()))
 
 		# Get the color as hexadecimal by a specific color name, if doesn't exist = white.
-		color_hex = CFF.COLOR_HEX_DICT.get(color_name.lower(), 'white')
-		
-		# Remove the first character from string.
-		color_hex = color_hex.replace('#', '')
+		color_hex = CFF.COLOR_HEX_DICT.get(color_name.lower(), 'white').replace('#', '')
 		if len(color_hex) < 6:
 			return tokens
 			
-		hasPatternTupleOrList = lambda x: isinstance(x, (tuple, list))
 		hasPatternNumbers = lambda x: isinstance(x, (int, float))
 
 		# Color all the texts of a tuple or list.
-		if hasPatternTupleOrList(tokens):
+		if isinstance(tokens, (tuple, list)):
 			objects = []
 			for token in tokens:
-				if hasPatternNumbers(token):
-					token = str(token)
-				objects.append(__scatter__(color_hex, src=token))
+				objects.append(__scatter__(color_hex, src = token))
 			return tuple(objects)
 			
-		# Convert integer, float to string.
-		if hasPatternNumbers(tokens):
-			tokens = str(tokens)
-		return __scatter__(color_hex, src=tokens)
+		return __scatter__(color_hex, src = tokens)
