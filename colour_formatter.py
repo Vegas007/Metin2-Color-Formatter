@@ -2,6 +2,7 @@
 __author__ = 'VegaS & martysama0134'
 __date__ = '2019-02-19'
 __version__ = '1.0'
+
 """ METIN2 COLOR FORMATTER
 	A simple class which convert the values into a string by a specific color name.
 
@@ -14,10 +15,10 @@ __version__ = '1.0'
 		text = CFF.format(8000, 'banana')
 		text = CFF.format(412.55, 'red')
 
-		text = CFF.multi_format(('a', 'b', 'c'), 'red')
-			# return a list | text[0], text[1], text[2]
-
+		text = CFF.format('Pending', '#113355')
 		text = CFF.format('Item name:', 'springgreen', CFF.FLAG_NEW_TAB) + CFF.format(item.GetItemName(), 'chocolate')
+		
+		text = CFF.multi_format(('a', 'b', 'c'), 'red') # text[0], text[1], text[2]
 """
 class CFF:
 	FLAG_NEW_LINE = 0
@@ -74,7 +75,6 @@ class CFF:
 			result.append(CFF.format(token, color_name, add_flag))
 		return tuple(result)
 
-# For tests
 def test():
 	print CFF.format('Metin2', 'green')
 	print CFF.format(8000, 'banana')
