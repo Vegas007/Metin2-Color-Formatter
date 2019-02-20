@@ -1,5 +1,5 @@
 
-# Metin2-Colour-Formatter
+# Metin2-Color-Formatter
 A simple class which convert the values into a string by a specific color name.
 Python Color Constants Module:
 	
