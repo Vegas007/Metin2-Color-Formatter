@@ -1,6 +1,6 @@
 
 # Metin2 Color Formatter
-A simple class writted for Python and C++ which convert the values into an string by a specific color rgb as hexadecimals.
+A simple class writted for Python and C++ which convert the param-values into an string by a specific color rgb as hexadecimals.
 
  - **Color constants module:**
 	```css
