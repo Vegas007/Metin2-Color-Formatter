@@ -56,7 +56,7 @@ class CFF:
 	}
 
 	@staticmethod
-	def format(token, color_name, add_flag=CFF.FLAG_EMPTY_STRING):
+	def format(token, color_name, add_flag = CFF.FLAG_EMPTY_STRING):
 		def get_format(color, src):
 			return '{0}{1}{2}{3}{4}'.format(CFF.PATTERN_BEGIN, color, src, CFF.PATTERN_END, CFF.FLAG_DICT[add_flag])
 
@@ -69,7 +69,7 @@ class CFF:
 		return get_format(color_hex, token)
 
 	@staticmethod
-	def multi_format(tokens, color_name, add_flag=CFF.FLAG_EMPTY_STRING):
+	def multi_format(tokens, color_name, add_flag = CFF.FLAG_EMPTY_STRING):
 		result = []
 		for token in tokens:
 			result.append(CFF.format(token, color_name, add_flag))
@@ -79,7 +79,7 @@ def test():
 	print CFF.format('Metin2', 'green')
 	print CFF.format(8000, 'banana')
 	print CFF.format(412.55, 'red')
-	print CFF.format(412.55, '#113355')
+	print CFF.format('Pending', '#113355')
 
 	print CFF.multi_format(('Ananas', 'Banana', 'Cachi'), 'red')
 	#print CFF.format('Item name:', 'springgreen', CFF.FLAG_NEW_TAB) + CFF.format(item.GetItemName(), 'chocolate')
