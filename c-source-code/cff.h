@@ -21,10 +21,10 @@ namespace CFF
 		FLAG_MAX_NUM
 	};
 
-	bool						IsHexColor(const std::string & color);
-	std::string					GetColor(const std::string & color);
-	std::string 				GetFormat(const ::string & color, const std::string & token, const uint8_t add_flag);
+	bool                        IsHexColor(const std::string & color);
+	std::string                 GetColor(const std::string & color);
+	std::string                 GetFormat(const ::string & color, const std::string & token, const uint8_t add_flag);
 
-	std::string 				format(const std::string & token, const std::string & color, const uint8_t add_flag = FLAG_EMPTY_STRING);
-	std::vector<std::string>	multi_format(const std::initializer_list<std::string> & tokenArgs, const std::string & color, const uint8_t add_flag = FLAG_EMPTY_STRING);
+	std::string                 format(const std::string & token, const std::string & color, const uint8_t add_flag = FLAG_EMPTY_STRING);
+	std::vector<std::string>    multi_format(const std::initializer_list<std::string> & tokenArgs, const std::string & color, const uint8_t add_flag = FLAG_EMPTY_STRING);
 }
