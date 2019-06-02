@@ -2,24 +2,8 @@
 __author__ = 'VegaS & martysama0134'
 __date__ = '2019-02-19'
 __version__ = '1.0'
+__description__ = 'https://github.com/Vegas007/Metin2-Color-Formatter'
 
-""" METIN2 COLOR FORMATTER
-	A simple class which convert the values into a string by a specific color name.
-
-	Python Color Constants Module:
-		https://www.webucator.com/blog/2015/03/python-color-constants-module/
-		https://www.color-hex.com/color/ccffff
-
-	Ex-How-To-Use:
-		text = CFF.format('Metin2', 'green')
-		text = CFF.format(8000, 'banana')
-		text = CFF.format(412.55, 'red')
-
-		text = CFF.format('Pending', '#113355')
-		text = CFF.format('Item name:', 'springgreen', CFF.FLAG_NEW_TAB) + CFF.format(item.GetItemName(), 'chocolate')
-		
-		text = CFF.multi_format(('a', 'b', 'c'), 'red') # text[0], text[1], text[2]
-"""
 class CFF:
 	FLAG_NEW_LINE = 0
 	FLAG_NEW_TAB = 1
@@ -39,20 +23,20 @@ class CFF:
 
 	# Colors
 	COLOR_HEX_DICT = {
-		'green': '#15FF00',
-		'blue': '#00C5FF',
-		'banana': '#E3CF57',
-		'chocolate': '#D2691E',
-		'darkred': '#8B0000',
-		'gray': '#808080',
-		'red': '#FF0000',
-		'skyblue': '#87CEEB',
-		'slateblue': '#6A5ACD',
-		'snow': '#FFFAFA',
-		'springgreen': '#00FF7F',
-		'steelblue': '#4682B4',
-		'white': '#FFFFFF',
-		'yellow': '#FFFF00',
+		'green':        '#15FF00',
+		'blue':         '#00C5FF',
+		'banana':       '#E3CF57',
+		'chocolate':    '#D2691E',
+		'darkred':      '#8B0000',
+		'gray':         '#808080',
+		'red':          '#FF0000',
+		'skyblue':      '#87CEEB',
+		'slateblue':    '#6A5ACD',
+		'snow':         '#FFFAFA',
+		'springgreen':  '#00FF7F',
+		'steelblue':    '#4682B4',
+		'white':        '#FFFFFF',
+		'yellow':       '#FFFF00',
 	}
 
 	@staticmethod
