@@ -109,6 +109,7 @@ namespace CFF
 		if (!IsHexColor(result_color))
 			result_color = HEX_COLOR_WHITE_STRING;
 
+		std::transform(result_color.begin(), result_color.end(), result_color.begin(), ::tolower);
 		return GetFormat(result_color, token, add_flag);
 	}
 
