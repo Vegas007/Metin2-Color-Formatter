@@ -1,7 +1,7 @@
 /*
 *	__author__      : VegaS
 *	__date__        : 2019-02-19
-*	__version__     : 1.0
+*	__version__     : 1.1
 *	__description__ : https://github.com/Vegas007/Metin2-Color-Formatter
 */
 
