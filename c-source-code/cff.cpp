@@ -7,6 +7,7 @@
 
 #include "Stdafx.h"
 #include "cff.h"
+#include <boost/format.hpp>
 
 namespace CFF
 {
@@ -67,9 +68,8 @@ namespace CFF
 	*/
 	std::string GetFormat(const std::string & color, const std::string & token, const uint8_t add_flag)
 	{
-		char fmt[1024 + 1];
-		snprintf(fmt, sizeof(fmt), "%s%s%s%s%s", CFF_PATTERN_BEGIN, color.c_str(), token.c_str(), CFF_PATTERN_END, stFlagsData[add_flag].c_str());
-		return fmt;
+		const boost::format fmt = boost::format("%s%s%s%s%s") % CFF_PATTERN_BEGIN % color.c_str() % token.c_str() % CFF_PATTERN_END % stFlagsData[add_flag].c_str();
+		return fmt.str();
 	}
 
 	/**
